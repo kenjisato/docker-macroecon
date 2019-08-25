@@ -1,12 +1,10 @@
-# Dockerfile for Kato and Sato (2020)
+# Dockerfile for a book project
 
 ARG BASE_CONTAINER=jupyter/scipy-notebook
 FROM $BASE_CONTAINER
 
 LABEL maintainer="Kenji Sato <mail@kenjisato.jp>"
 
-WORKDIR .
-
 RUN rm -r /home/$NB_USER/work
 
-COPY ./notebooks .
+COPY ./notebooks ./notebooks
