@@ -1,0 +1,15 @@
+version: "3"
+
+services:
+  jupyter:
+    image: macroecon
+  
+  ports:
+  - 8888:8888
+
+  volumes:
+  - ./julia:/home/jovyan/julia
+  - ./python:/home/jovyan/python
+  - ./r:/home/jovyan/r
+
+
